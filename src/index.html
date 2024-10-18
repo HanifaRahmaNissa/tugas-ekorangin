@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Latihan Tailwind CSS</title>
-   <!-- <link rel="stylesheet" href="./output.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Tailwind CSS</title>
+    <!-- Tambahkan Tailwind CSS melalui CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="...">
-   <section id="title" class="...">
-      <h1 class="...">Todo List Application</h1>
-   </section>
-   <section id="input" class="...">
-      <input type="text" name="assignment" id="assignment" 
-             class="..."
-             placeholder="Inputkan tugas yang akan dikerjakan ...">
-      <input type="button" id="btn-tambah" value="TAMBAH"
-             class="...">
-   </section>
-   <section id="output" class=""></section>
-   <script src="main.js"></script>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <!-- Container untuk Todo List Application -->
+    <div class="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
+        <!-- Title Section -->
+        <section id="title" class="text-center mb-8">
+            <h1 class="text-2xl font-bold text-gray-800">Todo List Application</h1>
+        </section>
+
+        <!-- Input Section -->
+        <section id="input" class="flex items-center gap-2 mb-4">
+            <input type="text" name="assignment" id="assignment" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Inputkan tugas yang akan dikerjakan ...">
+            <button id="btn-tambah" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                TAMBAH
+            </button>
+        </section>
+
+        <!-- Output Section -->
+        <section id="output" class="mt-4">
+            <ul id="list-tugas" class="list-disc pl-5 space-y-2">
+                <!-- Daftar tugas akan muncul di sini -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
